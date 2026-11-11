@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario demostrativo para comentarios y preguntas sobre el universo.">
+  <title>Contáctanos | El universo</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <h1>Contáctanos</h1>
+    <p>Comparte tus comentarios o preguntas</p>
+  </header>
+
+  <nav class="menu" aria-label="Navegación principal">
+    <a href="index.html">Inicio</a>
+    <a href="general.html">Información general</a>
+    <a href="descubrimientos.html">Descubrimientos recientes</a>
+    <a href="contacto.html" aria-current="page">Contáctanos</a>
+  </nav>
+<div class="marquee">
+    <span>🌌 BIENVENIDOS A EL UNIVERSO 🚀 DESCUBRE LOS MISTERIOS DEL ESPACIO ✨</span>
+</div>
+<div class="marquee marquee-secundaria">
+    <span>💫 ¿TIENES CURIOSIDAD POR EL UNIVERSO? COMPARTE TUS PREGUNTAS</span>
+</div>
+  <main class="contenedor">
+<section class="panel">
+      <h2>Información de contacto</h2>
+      <p><strong>Correo electrónico:</strong> contacto@universo.com</p>
+      <p><strong>Teléfono:</strong> (55) 0000 0000</p>
+
+      <h2>Envíanos un mensaje</h2>
+      <p>Este formulario es una demostración de HTML. No guarda ni envía datos.</p>
+
+      <form action="#" method="get" onsubmit="event.preventDefault(); alert('Formulario de demostración: los datos no se enviaron ni se guardaron.');">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="tunombre@correo.com" required>
+
+        <label for="comentario">Comentario, duda o sugerencia</label>
+        <textarea id="comentario" name="comentario" rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
+
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+</section>
+  </main>
+
+  <footer><p>Contactanos</p></footer>
+</body>
+</html>

@@ -1,0 +1,431 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.65;
+  color: #e6edff;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(72, 112, 200, .18), transparent 30%),
+    linear-gradient(145deg, #080d22, #141e44 55%, #1e2f66);
+}
+
+.encabezado {
+  text-align: center;
+  padding: clamp(24px, 4vw, 38px) 18px 24px;
+}
+
+.encabezado h1 {
+  color: #d6e4ff;
+  font-size: clamp(1.65rem, 4vw, 2.7rem);
+  line-height: 1.2;
+  margin-bottom: 10px;
+  text-shadow: 0 0 12px rgba(100, 160, 255, .5);
+}
+
+.encabezado p {
+  color: #b8caff;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 14px;
+  background: rgba(8, 15, 40, .96);
+  border-top: 1px solid #314d85;
+  border-bottom: 1px solid #496eae;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .28);
+  backdrop-filter: blur(12px);
+}
+
+.menu a {
+  color: #dce8ff;
+  text-decoration: none;
+  padding: 9px 14px;
+  border-radius: 7px;
+  white-space: nowrap;
+  transition: background .2s ease, color .2s ease;
+}
+
+.menu a:hover,
+.menu a:focus-visible,
+.menu a[aria-current="page"] {
+  background: #2b58a7;
+  color: #fff;
+  outline: none;
+}
+
+.contenedor {
+  width: min(100% - 32px, 950px);
+  margin: 26px auto;
+}
+
+.panel {
+  padding: clamp(18px, 4vw, 32px);
+  background: rgba(11, 23, 57, .78);
+  border: 1px solid #34558f;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .2);
+  overflow-wrap: anywhere;
+}
+
+h2 {
+  color: #a8c7ff;
+  font-size: clamp(1.35rem, 3vw, 1.7rem);
+  margin: 22px 0 12px;
+}
+
+h2:first-child { margin-top: 0; }
+
+h3 {
+  color: #90b8ff;
+  font-size: clamp(1.12rem, 2.5vw, 1.25rem);
+  margin: 18px 0 8px;
+}
+
+p {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 18px auto;
+  border: 2px solid #3a66b3;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(80, 140, 255, .22);
+}
+
+.imagen-principal {
+  width: min(100%, 620px);
+  max-height: 340px;
+  object-fit: cover;
+}
+
+.entrada-noticia {
+  margin: 22px 0;
+  padding: clamp(14px, 3vw, 18px);
+  border: 1px solid #314d85;
+  border-radius: 10px;
+  background: rgba(28, 48, 93, .38);
+}
+
+.entrada-noticia img {
+  width: min(100%, 420px);
+  max-height: 260px;
+  object-fit: cover;
+}
+
+.nota {
+  color: #b8caff;
+  font-size: .92rem;
+  font-style: italic;
+}
+
+form {
+  margin-top: 18px;
+  padding: clamp(14px, 3vw, 22px);
+  border: 1px solid #34558f;
+  border-radius: 10px;
+  background: rgba(26, 48, 96, .35);
+}
+
+label {
+  display: block;
+  margin: 12px 0 5px;
+  color: #b8d0ff;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  display: block;
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #4a7acc;
+  border-radius: 6px;
+  background: #101e3c;
+  color: #e6edff;
+  font-size: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder { color: #aab9d7; }
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #70a0ff;
+  outline-offset: 2px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+form button {
+  margin-top: 18px;
+  width: 100%;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: linear-gradient(#3b74d9, #2554b0);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: linear-gradient(#4a84e9, #2d60c4);
+}
+
+footer {
+  padding: 20px 16px;
+  margin-top: 36px;
+  border-top: 1px solid #314d85;
+  color: #a9bce2;
+  text-align: center;
+  font-size: .92rem;
+}
+
+footer p { text-align: center; margin: 0; }
+
+/* TABLET Y CELULAR */
+@media (max-width: 700px) {
+  html { scroll-padding-top: 76px; }
+
+  .encabezado {
+    padding: 23px 14px 18px;
+  }
+
+  .menu {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 9px 10px;
+    gap: 6px;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .menu a {
+    flex: 0 0 auto;
+    padding: 9px 12px;
+    font-size: .92rem;
+  }
+
+  .contenedor {
+    width: calc(100% - 22px);
+    margin: 16px auto;
+  }
+
+  .panel { padding: 17px; }
+  .entrada-noticia { margin: 18px 0; }
+  img { margin: 15px auto; }
+}
+
+@media (max-width: 380px) {
+  .encabezado h1 { font-size: 1.55rem; }
+  .encabezado p { font-size: .92rem; }
+  .menu a { font-size: .86rem; padding: 8px 10px; }
+  .panel { padding: 14px; }
+}
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #101d42;
+    color: #8fc5ff;
+    padding: 12px 0;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: mover 20s linear infinite;
+}
+
+@keyframes mover {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+/* Segunda marquesina temática */
+.marquee-secundaria {
+  background: linear-gradient(90deg, #172b58, #263f78, #172b58);
+  color: #d4e5ff;
+  border-top: 1px solid #4568a5;
+  border-bottom: 1px solid #4568a5;
+}
+
+.marquee-secundaria span {
+  animation: mover-secundaria 28s linear infinite;
+  font-weight: 600;
+  letter-spacing: .4px;
+}
+
+@keyframes mover-secundaria {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100vw); }
+}
+
+/* Tabla avanzada de descubrimientos */
+.tabla-descubrimientos {
+  width: min(100% - 32px, 950px);
+  margin: 26px auto 0;
+  padding: clamp(16px, 3vw, 26px);
+  background: rgba(11, 23, 57, .86);
+  border: 1px solid #4568a5;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .22);
+}
+
+.tabla-descubrimientos h2 {
+  margin-top: 0;
+}
+
+.tabla-scroll {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 9px;
+  border: 1px solid #4568a5;
+}
+
+.tabla-avanzada {
+  width: 100%;
+  min-width: 570px;
+  border-collapse: collapse;
+  background: rgba(16, 30, 65, .85);
+  text-align: left;
+}
+
+.tabla-avanzada th,
+.tabla-avanzada td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(112, 155, 225, .28);
+}
+
+.tabla-avanzada th {
+  color: #f0f5ff;
+  background: linear-gradient(90deg, #315da7, #25477f);
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.tabla-avanzada tbody tr:nth-child(even) {
+  background: rgba(73, 111, 177, .16);
+}
+
+.tabla-avanzada tbody tr:hover {
+  background: rgba(75, 130, 220, .25);
+  transition: background .2s ease;
+}
+
+.tabla-avanzada td:first-child {
+  color: #b8d3ff;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .tabla-descubrimientos {
+    width: calc(100% - 22px);
+    margin-top: 16px;
+  }
+  .tabla-avanzada th,
+  .tabla-avanzada td {
+    padding: 11px 12px;
+    font-size: .92rem;
+  }
+}
+
+/* TABLA AVANZADA DE DESCUBRIMIENTOS */
+.intro-tabla {
+  color: #c6d8ff;
+  margin-bottom: 12px;
+}
+
+.tabla-contenedor {
+  width: 100%;
+  overflow-x: auto;
+  margin: 14px 0 30px;
+  border: 1px solid #496eae;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+  scrollbar-width: thin;
+  scrollbar-color: #6395e8 #101e3c;
+}
+
+.tabla-descubrimientos {
+  width: 100%;
+  min-width: 590px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(12, 27, 63, .88);
+  text-align: left;
+}
+
+.tabla-descubrimientos th {
+  padding: 15px 17px;
+  color: #fff;
+  background: linear-gradient(120deg, #2855a2, #493b91);
+  font-size: .98rem;
+  letter-spacing: .3px;
+}
+
+.tabla-descubrimientos td {
+  padding: 14px 17px;
+  color: #e6edff;
+  border-bottom: 1px solid rgba(112, 153, 220, .22);
+}
+
+.tabla-descubrimientos tbody tr:nth-child(even) {
+  background: rgba(74, 112, 180, .16);
+}
+
+.tabla-descubrimientos tbody tr:hover {
+  background: rgba(76, 130, 220, .28);
+  transition: background .2s ease;
+}
+
+.tabla-descubrimientos tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.tabla-descubrimientos td:first-child {
+  color: #a9c9ff;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .tabla-contenedor { margin-bottom: 24px; }
+  .tabla-descubrimientos th,
+  .tabla-descubrimientos td { padding: 12px 14px; }
+}
